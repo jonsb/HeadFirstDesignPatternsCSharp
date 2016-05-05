@@ -1,9 +1,12 @@
 // Composite pattern: treat a collection of objects in the same way as individual objects
+
+using System.Collections.Generic;
+
 namespace PatternsOfPatterns
 {
     public class Flock : Quackable
     {
-        IList quackers = new List();
+        IList<Quackable> quackers = new List<Quackable>();
         
         public void Add(Quackable quacker)
         {

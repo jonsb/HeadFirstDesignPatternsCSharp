@@ -7,7 +7,7 @@ namespace PatternsOfPatterns
         public static void Main(string[] args)
         {
             DuckSimulator simulator = new DuckSimulator();
-            AbstractDuckFactory duckFactory = new DuckFactory();
+            AbstractDuckFactory duckFactory = new CountingDuckFactory();
             AbstractGooseFactory gooseFactory = new GooseFactory();
             simulator.Simulate(duckFactory, gooseFactory);
         }
