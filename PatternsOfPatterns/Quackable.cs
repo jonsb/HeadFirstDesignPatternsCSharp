@@ -1,15 +1,33 @@
 namespace PatternsOfPatterns
 {
-    public interface Quackable
+    public interface Quackable 
     {
         void Quack();    
-    }
+    }    
 
-    public class MallardDuck : Quackable
+    public class MallardDuck : Quackable, QuackObservable
     {
+        Observable observable;
+        
+        public MallardDuck()
+        {
+            observable = new Observable(this);
+        }
+        
         public void Quack()
         {
             System.Console.WriteLine("Quack");
+            NotifyObservers();
+        }
+        
+        public void RegisterObserver(Observer observer)
+        {
+            observable.RegisterObserver(observer);
+        }
+        
+        public void NotifyObservers()
+        {
+            observable.NotifyObservers();
         }
     }
 
