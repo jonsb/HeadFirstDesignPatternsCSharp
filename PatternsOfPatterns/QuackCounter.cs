@@ -3,7 +3,7 @@
 namespace PatternsOfPatterns
 {
     public class QuackCounter : Quackable
-    {
+    {        
         Quackable duck;
         static int numberOfQuacks;
         
@@ -21,6 +21,14 @@ namespace PatternsOfPatterns
         public static int GetQuacks()
         {
             return numberOfQuacks;
+        }
+        
+        public void RegisterObserver(Observer observer)
+        {            
+        }
+        
+        public void NotifyObservers()
+        {            
         }
     }   
 }

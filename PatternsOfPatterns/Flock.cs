@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace PatternsOfPatterns
 {
     public class Flock : Quackable
-    {
+    {        
         IList<Quackable> quackers = new List<Quackable>();
         
         public void Add(Quackable quacker)
@@ -18,7 +18,20 @@ namespace PatternsOfPatterns
             foreach (var quacker in quackers)
             {
                 quacker.Quack();
-            }        
+            }
+        }
+        
+        public void RegisterObserver(Observer observer)
+        {
+            foreach (var quacker in quackers)
+            {
+                quacker.RegisterObserver(observer);
+            }
+        }
+        
+        public void NotifyObservers()
+        {
+            
         }
     }
 }

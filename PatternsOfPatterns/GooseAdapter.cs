@@ -2,7 +2,7 @@
 
 namespace PatternsOfPatterns
 {
-    public class GooseAdapter : Quackable
+    public class GooseAdapter : Quacker
     {
         Goose goose;
         
@@ -11,7 +11,7 @@ namespace PatternsOfPatterns
             this.goose = goose;
         }
         
-        public void Quack()
+        public override void Quack()
         {
             goose.Honk();
         }

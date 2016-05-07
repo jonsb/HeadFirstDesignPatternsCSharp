@@ -13,7 +13,7 @@ namespace PatternsOfPatterns
         }
         
         void Simulate(AbstractDuckFactory duckFactory, AbstractGooseFactory gooseFactory)
-        {
+        {            
             Quackable redheadDuck = duckFactory.CreateRedheadDuck();
             Quackable duckCall = duckFactory.CreateDuckCall();
             Quackable rubberDuck = duckFactory.CreateRubberDuck();
@@ -37,6 +37,9 @@ namespace PatternsOfPatterns
             flockOfMallards.Add(mallardFour);
             
             flockOfDucks.Add(flockOfMallards);
+            
+            Quackologist quackologist = new Quackologist();
+            flockOfDucks.RegisterObserver(quackologist);
             
             Console.WriteLine("\nDuck Simulator: Whole Flock Simulation");
             
