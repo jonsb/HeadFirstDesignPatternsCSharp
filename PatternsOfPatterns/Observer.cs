@@ -1,14 +1,17 @@
 using System;
 
-public interface Observer
+namespace DuckSimulator
 {
-    void Update(QuackObservable duck);
-}
-
-public class Quackologist : Observer
-{
-    public void Update(QuackObservable duck)
+    public interface Observer
     {
-        Console.WriteLine("Quackologist: " + duck + " just quacked.");
+        void Update(QuackObservable duck);
+    }
+
+    public class Quackologist : Observer
+    {
+        public void Update(QuackObservable duck)
+        {
+            Console.WriteLine("Quackologist: " + duck + " just quacked.");
+        }
     }
 }

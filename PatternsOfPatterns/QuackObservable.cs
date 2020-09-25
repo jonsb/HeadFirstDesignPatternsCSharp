@@ -1,5 +1,8 @@
-public interface QuackObservable
+namespace DuckSimulator
 {
-    void RegisterObserver(Observer observer);
-    void NotifyObservers();
+    public interface QuackObservable
+    {
+        void RegisterObserver(Observer observer);
+        void NotifyObservers();
+    }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public class DuckSimulator
     {

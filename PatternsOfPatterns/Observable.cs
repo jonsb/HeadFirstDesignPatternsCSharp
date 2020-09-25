@@ -1,25 +1,28 @@
 using System.Collections.Generic;
 
-public class Observable : QuackObservable
+namespace DuckSimulator
 {
-    IList<Observer> observers = new List<Observer>();
-    QuackObservable duck;
-    
-    public Observable(QuackObservable duck)
+    public class Observable : QuackObservable
     {
-        this.duck = duck;
-    }
+        IList<Observer> observers = new List<Observer>();
+        QuackObservable duck;
     
-    public void RegisterObserver(Observer observer)
-    {
-        observers.Add(observer);
-    }
-    
-    public void NotifyObservers()
-    {
-        foreach (var observer in observers)
+        public Observable(QuackObservable duck)
         {
-            observer.Update(duck);
+            this.duck = duck;
+        }
+    
+        public void RegisterObserver(Observer observer)
+        {
+            observers.Add(observer);
+        }
+    
+        public void NotifyObservers()
+        {
+            foreach (var observer in observers)
+            {
+                observer.Update(duck);
+            }
         }
     }
 }

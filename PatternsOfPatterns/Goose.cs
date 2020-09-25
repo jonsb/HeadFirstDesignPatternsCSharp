@@ -1,4 +1,4 @@
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public class Goose // Not Quackable
     {

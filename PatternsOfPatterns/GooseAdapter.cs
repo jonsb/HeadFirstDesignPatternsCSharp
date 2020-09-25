@@ -1,6 +1,6 @@
 // Adapter pattern
 
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public class GooseAdapter : Quacker
     {

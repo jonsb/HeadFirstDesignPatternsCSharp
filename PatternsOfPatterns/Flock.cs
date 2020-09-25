@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public class Flock : Quackable
     {        

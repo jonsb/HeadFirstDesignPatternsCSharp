@@ -1,6 +1,6 @@
 // Decorator pattern
 
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public class QuackCounter : Quackable
     {        

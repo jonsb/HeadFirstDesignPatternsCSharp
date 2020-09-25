@@ -1,5 +1,5 @@
 // Abstract Factory pattern
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public abstract class AbstractGooseFactory
     {

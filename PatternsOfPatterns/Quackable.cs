@@ -1,4 +1,4 @@
-namespace PatternsOfPatterns
+namespace DuckSimulator
 {
     public interface Quackable : QuackObservable 
     {
